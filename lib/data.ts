@@ -3,13 +3,20 @@
  * 修改此文件即可更新网站所有内容，无需改动组件代码
  */
 
+// ========== 网站设置 ==========
+export const site = {
+  title: 'Shinko\'s Portfolio',     // 网站标题（浏览器标签页 + SEO）
+  navTitle: 'Portfolio',            // 导航栏左上角显示的文字
+  description: 'This is My Web',    // 网站描述（SEO + OG 分享）
+}
+
 // ========== 个人信息 ==========
 export const personalInfo = {
   name: 'Shinko',                // 你的名字（显示在 Hero 区域）
   title: '',                 // 职位头衔（显示在 Hero 名字下方）
   description: 'This is My Web', // 个人简介（Hero 区域描述文字）
-  email: 'hello@example.com',    // 联系邮箱
-  github: 'https://github.com/yourusername',  // GitHub 主页链接
+  email: 'shenzhan22@gmail.com',    // 联系邮箱
+  github: 'https://github.com/iconkop',  // GitHub 主页链接
 }
 
 // ========== Hero 区域 ==========

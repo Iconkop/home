@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from 'next-themes'
-import { navLinks } from '@/lib/data'
+import { navLinks, site } from '@/lib/data'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -36,7 +36,7 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <a href="#" className="text-lg font-semibold tracking-tight">
-          <span className="gradient-text">Portfolio</span>
+          <span className="gradient-text">{site.navTitle}</span>
         </a>
 
         {/* Desktop nav */}
