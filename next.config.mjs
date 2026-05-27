@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
+const repo = process.env.BASE_PATH || ''
+
 const nextConfig = {
-  output: 'export',       // 静态导出，生成 out/ 文件夹
+  output: 'export',
   images: {
-    unoptimized: true,    // 静态导出需要禁用图片优化
+    unoptimized: true,
   },
+  basePath: repo,
+  assetPrefix: repo,
 }
 
 export default nextConfig
