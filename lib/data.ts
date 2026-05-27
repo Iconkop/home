@@ -34,6 +34,7 @@ export const navLinks = [
   { label: 'Tech Stack', href: '#tech-stack' }, // 技术栈
   { label: 'Experience', href: '#experience' }, // 经历
   { label: 'Projects', href: '#projects' },     // 项目展示
+  { label: 'My Site', href: '#my-site' },        // 我的网站
   { label: 'Contact', href: '#contact' },       // 联系方式
 ]
 
@@ -139,6 +140,25 @@ export const projects = [
 export const projectsSection = {
   subtitle: 'A selection of projects I\'ve built — from web apps to developer tools.', // 区块副标题
 }
+
+// ========== 我的网站 ==========
+// 可自由增减，布局自动适配：
+//   PC 端：1-2 个居中，3 个靠左，4 个填满一行
+//   移动端：每行 2 个，奇数时最后一个居中
+// icon: 图标图片路径（放在 public/ 目录下），留空显示默认图标
+// url: 网站链接
+// description: 简短描述（可选，显示在名称下方）
+export const mySiteSection = {
+  subtitle: 'A collection of my websites and projects.', // 区块副标题
+}
+
+export const mySite = [
+  { name: 'Blog', icon: '', url: 'https://example.com', description: 'Personal blog' },
+  { name: 'GitHub', icon: '', url: 'https://github.com', description: 'Open source projects' },
+  { name: 'Docs', icon: '', url: 'https://example.com/docs', description: 'Documentation' },
+  { name: 'Gallery', icon: '', url: 'https://example.com/gallery', description: 'Photo gallery' },
+  { name: 'Tools', icon: '', url: 'https://example.com/tools', description: 'Useful tools' },
+]
 
 // ========== 联系方式 ==========
 export const contact = {

@@ -22,20 +22,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <noscript>{`
-          <style>
-            [style*="opacity: 0"],
-            [style*="opacity:0"],
-            [style*="transform:translateY"],
-            [style*="transform:translateX"],
-            [style*="transform:scale"] {
-              opacity: 1 !important;
-              transform: none !important;
-            }
-          </style>
-        `}</noscript>
-      </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans antialiased`}>
         <ThemeProvider>
           {children}
