@@ -120,7 +120,15 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    setMobileOpen(false)
+                    const id = link.href.replace('#', '')
+                    setTimeout(() => {
+                      const el = document.getElementById(id)
+                      el?.scrollIntoView({ behavior: 'smooth' })
+                    }, 100)
+                  }}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {link.label}
