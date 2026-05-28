@@ -49,8 +49,8 @@ export default function ParticleBackground() {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
       const isDark = resolvedTheme === 'dark'
-      const particleColor = isDark ? '129, 140, 248' : '99, 102, 241'
-      const lineColor = isDark ? '129, 140, 248' : '99, 102, 241'
+      const particleColor = isDark ? '196, 181, 253' : '139, 92, 246'
+      const lineColor = isDark ? '196, 181, 253' : '139, 92, 246'
 
       particles.forEach((p, i) => {
         // Mouse influence (skip on mobile for performance)

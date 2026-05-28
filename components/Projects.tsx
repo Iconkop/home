@@ -35,7 +35,7 @@ export default function Projects() {
                 className="group glass rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full"
               >
                 {/* 项目封面 */}
-                <div className="relative aspect-video bg-gradient-to-br from-indigo-500/20 to-purple-500/20 overflow-hidden">
+                <div className="relative aspect-video bg-gradient-to-br from-violet-500/20 to-indigo-500/20 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-5xl sm:text-6xl opacity-20">🚀</div>
                   </div>
@@ -44,7 +44,7 @@ export default function Projects() {
 
                 {/* 项目信息 */}
                 <div className="p-4 sm:p-6">
-                  <h3 className="text-lg sm:text-xl font-semibold mb-2 group-hover:text-indigo-500 transition-colors">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2 group-hover:text-violet-500 transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4">

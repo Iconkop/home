@@ -11,8 +11,8 @@ export default function MySite() {
     <section id="my-site" className="py-20 sm:py-28 px-4 sm:px-6 relative overflow-hidden">
       {/* 背景装饰 */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-indigo-500/[0.04] dark:bg-indigo-500/[0.06] rounded-full blur-[100px]" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500/[0.04] dark:bg-purple-500/[0.06] rounded-full blur-[80px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-violet-400/[0.04] dark:bg-violet-400/[0.06] rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-indigo-400/[0.04] dark:bg-indigo-400/[0.06] rounded-full blur-[80px]" />
         <div
           className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
           style={{
@@ -33,7 +33,7 @@ export default function MySite() {
               transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium glass text-muted-foreground mb-5"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
               {mySiteSection.subtitle}
             </motion.div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
@@ -63,19 +63,19 @@ export default function MySite() {
               className="group relative block w-[calc(50%-6px)] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)]"
             >
               {/* 渐变光晕 */}
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-60 dark:group-hover:opacity-40 blur-md transition-opacity duration-500" />
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-violet-400 via-indigo-400 to-fuchsia-400 opacity-0 group-hover:opacity-60 dark:group-hover:opacity-40 blur-md transition-opacity duration-500" />
 
               {/* 卡片主体 */}
-              <div className="relative glass rounded-2xl p-5 sm:p-6 flex flex-col items-center gap-4 h-full group-hover:border-indigo-500/30 dark:group-hover:border-indigo-400/20 transition-all duration-300">
+              <div className="relative glass rounded-2xl p-5 sm:p-6 flex flex-col items-center gap-4 h-full group-hover:border-violet-400/30 dark:group-hover:border-violet-400/20 transition-all duration-300">
                 {/* 顶部发光线 */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-indigo-500/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-violet-400/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* 图标容器 */}
                 <div className="relative">
                   {/* 外圈光环 */}
-                  <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/10 group-hover:to-purple-500/10 transition-all duration-500 blur-sm" />
+                  <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-violet-400/0 to-indigo-400/0 group-hover:from-violet-400/10 group-hover:to-indigo-400/10 transition-all duration-500 blur-sm" />
 
-                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-indigo-500/8 to-purple-500/8 dark:from-indigo-500/15 dark:to-purple-500/15 flex items-center justify-center overflow-hidden group-hover:from-indigo-500/15 group-hover:to-purple-500/15 dark:group-hover:from-indigo-500/25 dark:group-hover:to-purple-500/25 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-indigo-500/10">
+                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-violet-400/8 to-indigo-400/8 dark:from-violet-400/15 dark:to-indigo-400/15 flex items-center justify-center overflow-hidden group-hover:from-violet-400/15 group-hover:to-indigo-400/15 dark:group-hover:from-violet-400/25 dark:group-hover:to-indigo-400/25 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-violet-400/10">
                     {item.icon ? (
                       <img
                         src={item.icon}
@@ -85,7 +85,7 @@ export default function MySite() {
                     ) : (
                       /* 默认 SVG 矢量图标 */
                       <svg
-                        className="w-10 h-10 sm:w-12 sm:h-12 text-foreground/30 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-all duration-300 group-hover:scale-110"
+                        className="w-10 h-10 sm:w-12 sm:h-12 text-foreground/30 group-hover:text-violet-400 dark:group-hover:text-violet-400 transition-all duration-300 group-hover:scale-110"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -97,7 +97,7 @@ export default function MySite() {
                   </div>
 
                   {/* 底部投影光晕 */}
-                  <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-10 h-3 bg-indigo-500/25 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-10 h-3 bg-violet-400/25 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
                 {/* 文字区 */}
