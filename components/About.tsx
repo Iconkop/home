@@ -6,10 +6,10 @@ import ScrollReveal from './ScrollReveal'
 
 export default function About() {
   return (
-    <section id="about" className="py-20 sm:py-32 px-4 sm:px-6">
+    <section id="about" className="py-14 sm:py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-12 sm:mb-20">
+          <div className="text-center mb-8 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
               About <span className="gradient-text">Me</span>
             </h2>
@@ -20,7 +20,7 @@ export default function About() {
         </ScrollReveal>
 
         {/* 个人介绍 + 技能 */}
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-16 sm:mb-24">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-12 sm:mb-20">
           <ScrollReveal direction="left">
             <div className="space-y-4 sm:space-y-6">
               <h3 className="text-xl sm:text-2xl font-semibold">{about.backgroundTitle}</h3>
@@ -60,7 +60,7 @@ export default function About() {
 
         {/* 技术栈 */}
         <ScrollReveal>
-          <div id="tech-stack" className="mb-16 sm:mb-24">
+          <div id="tech-stack" className="mb-12 sm:mb-20">
             <h3 className="text-xl sm:text-2xl font-semibold text-center mb-6 sm:mb-10">{about.techStackTitle}</h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
               {techStack.map((tech, i) => (

@@ -27,7 +27,7 @@ const contactLinks = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 sm:py-32 px-4 sm:px-6">
+    <section id="contact" className="py-14 sm:py-24 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto text-center">
         <ScrollReveal>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">

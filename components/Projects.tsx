@@ -9,10 +9,10 @@ export default function Projects() {
   if (projects.length === 0) return null
 
   return (
-    <section id="projects" className="py-20 sm:py-32 px-4 sm:px-6 gradient-bg">
+    <section id="projects" className="py-14 sm:py-24 px-4 sm:px-6 gradient-bg">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-12 sm:mb-20">
+          <div className="text-center mb-8 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
               Featured <span className="gradient-text">Projects</span>
             </h2>

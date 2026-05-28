@@ -26,7 +26,8 @@ export default function ParticleBackground() {
 
     let animationId: number
     let particles: Particle[] = []
-    const particleCount = 60
+    const isMobile = window.innerWidth < 768
+    const particleCount = isMobile ? 30 : 60
 
     const resize = () => {
       canvas.width = window.innerWidth
@@ -52,14 +53,16 @@ export default function ParticleBackground() {
       const lineColor = isDark ? '129, 140, 248' : '99, 102, 241'
 
       particles.forEach((p, i) => {
-        // Mouse influence
-        const dx = mouseRef.current.x - p.x
-        const dy = mouseRef.current.y - p.y
-        const dist = Math.sqrt(dx * dx + dy * dy)
-        if (dist < 200) {
-          const force = (200 - dist) / 200 * 0.02
-          p.vx -= dx * force
-          p.vy -= dy * force
+        // Mouse influence (skip on mobile for performance)
+        if (!isMobile) {
+          const dx = mouseRef.current.x - p.x
+          const dy = mouseRef.current.y - p.y
+          const dist = Math.sqrt(dx * dx + dy * dy)
+          if (dist < 200) {
+            const force = (200 - dist) / 200 * 0.02
+            p.vx -= dx * force
+            p.vy -= dy * force
+          }
         }
 
         // Update position
@@ -83,10 +86,11 @@ export default function ParticleBackground() {
         ctx.fill()
 
         // Draw connections
+        const connectionDist = isMobile ? 100 : 150
         for (let j = i + 1; j < particles.length; j++) {
           const p2 = particles[j]
           const d = Math.sqrt((p.x - p2.x) ** 2 + (p.y - p2.y) ** 2)
-          if (d < 150) {
+          if (d < connectionDist) {
             ctx.beginPath()
             ctx.moveTo(p.x, p.y)
             ctx.lineTo(p2.x, p2.y)
