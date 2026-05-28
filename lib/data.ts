@@ -153,12 +153,11 @@ export const mySiteSection = {
 }
 
 export const mySite = [
-  { name: 'Blog', icon: '', url: 'https://example.com', description: 'Personal blog' },
+  { name: '小辰云小栈', icon: 'https://xusue.com/favicon.ico', url: 'https://xusue.com', description: 'Personal blog' },
   { name: 'GitHub', icon: '', url: 'https://github.com', description: 'Open source projects' },
   { name: 'Docs', icon: '', url: 'https://example.com/docs', description: 'Documentation' },
   { name: 'Gallery', icon: '', url: 'https://example.com/gallery', description: 'Photo gallery' },
-  { name: 'Tools', icon: '', url: 'https://example.com/tools', description: 'Useful tools' },
-]
+  ]
 
 // ========== 联系方式 ==========
 export const contact = {

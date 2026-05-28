@@ -13,11 +13,10 @@ export default function MySite() {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-indigo-500/[0.04] dark:bg-indigo-500/[0.06] rounded-full blur-[100px]" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500/[0.04] dark:bg-purple-500/[0.06] rounded-full blur-[80px]" />
-        {/* 网格背景 */}
         <div
           className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
           style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
+            backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)',
             backgroundSize: '40px 40px',
           }}
         />
@@ -43,8 +42,8 @@ export default function MySite() {
           </div>
         </ScrollReveal>
 
-        {/* 卡片网格 */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+        {/* 卡片网格：移动端2列，sm 3列，lg 4列居中 */}
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-[720px] mx-auto">
           {mySite.map((item, i) => (
             <motion.a
               key={item.name}
@@ -59,39 +58,50 @@ export default function MySite() {
                 delay: i * 0.08,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              whileHover={{ y: -8, scale: 1.03 }}
+              whileHover={{ y: -8, scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="group relative block"
+              className="group relative block w-[calc(50%-6px)] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)]"
             >
-              {/* 渐变光晕（hover 时出现） */}
+              {/* 渐变光晕 */}
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-60 dark:group-hover:opacity-40 blur-md transition-opacity duration-500" />
 
               {/* 卡片主体 */}
-              <div className="relative glass rounded-2xl p-5 sm:p-6 flex flex-col items-center gap-3 h-full group-hover:border-indigo-500/30 dark:group-hover:border-indigo-400/20 transition-all duration-300">
-                {/* 顶部发光点 */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative glass rounded-2xl p-5 sm:p-6 flex flex-col items-center gap-4 h-full group-hover:border-indigo-500/30 dark:group-hover:border-indigo-400/20 transition-all duration-300">
+                {/* 顶部发光线 */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-indigo-500/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                {/* 图标 */}
+                {/* 图标容器 */}
                 <div className="relative">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 dark:from-indigo-500/15 dark:to-purple-500/15 flex items-center justify-center group-hover:from-indigo-500/20 group-hover:to-purple-500/20 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-indigo-500/10">
+                  {/* 外圈光环 */}
+                  <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/10 group-hover:to-purple-500/10 transition-all duration-500 blur-sm" />
+
+                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-indigo-500/8 to-purple-500/8 dark:from-indigo-500/15 dark:to-purple-500/15 flex items-center justify-center overflow-hidden group-hover:from-indigo-500/15 group-hover:to-purple-500/15 dark:group-hover:from-indigo-500/25 dark:group-hover:to-purple-500/25 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-indigo-500/10">
                     {item.icon ? (
                       <img
                         src={item.icon}
                         alt={item.name}
-                        className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl object-cover"
+                        className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-sm group-hover:drop-shadow-md transition-all duration-300 group-hover:scale-110"
                       />
                     ) : (
-                      <span className="text-2xl sm:text-3xl opacity-50 group-hover:opacity-90 transition-opacity duration-300 group-hover:scale-110 transform">
-                        🌐
-                      </span>
+                      /* 默认 SVG 矢量图标 */
+                      <svg
+                        className="w-10 h-10 sm:w-12 sm:h-12 text-foreground/30 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-all duration-300 group-hover:scale-110"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={1.2}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                      </svg>
                     )}
                   </div>
-                  {/* 图标底部光晕 */}
-                  <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-3 bg-indigo-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  {/* 底部投影光晕 */}
+                  <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-10 h-3 bg-indigo-500/25 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
-                {/* 文字 */}
-                <div className="text-center flex-1 flex flex-col justify-center">
+                {/* 文字区 */}
+                <div className="text-center">
                   <span className="text-sm sm:text-base font-semibold text-foreground/80 group-hover:text-foreground transition-colors duration-300">
                     {item.name}
                   </span>
@@ -102,14 +112,15 @@ export default function MySite() {
                   )}
                 </div>
 
-                {/* 底部箭头指示 */}
+                {/* 底部外链箭头 */}
                 <svg
-                  className="w-3.5 h-3.5 text-muted-foreground/0 group-hover:text-muted-foreground translate-y-1 group-hover:translate-y-0 transition-all duration-300"
+                  className="w-3.5 h-3.5 text-muted-foreground/0 group-hover:text-muted-foreground/60 translate-y-1 group-hover:translate-y-0 transition-all duration-300"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  strokeWidth={2}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </div>
             </motion.a>
