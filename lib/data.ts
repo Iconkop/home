@@ -5,7 +5,7 @@
 
 // ========== 网站设置 ==========
 export const site = {
-  title: 'Shinko\'s Portfolio',     // 网站标题（浏览器标签页 + SEO）
+  title: '小辰云小栈',     // 网站标题（浏览器标签页 + SEO）
   navTitle: 'Portfolio',            // 导航栏左上角显示的文字
   description: 'This is My Web',    // 网站描述（SEO + OG 分享）
 }
@@ -21,10 +21,10 @@ export const personalInfo = {
 
 // ========== Hero 区域 ==========
 export const hero = {
-  badge: 'Available for opportunities',   // 状态标签文字
-  ctaPrimary: 'View Projects',            // 主按钮文字
-  ctaSecondary: 'Get in Touch',           // 副按钮文字
-  scrollText: 'Scroll',                   // 滚动提示文字
+  badge: '开放合作机会',   // 状态标签文字
+  ctaPrimary: '浏览项目',            // 主按钮文字
+  ctaSecondary: '取得联系',           // 副按钮文字
+  scrollText: '向下滚动',                   // 滚动提示文字
 }
 
 // ========== 导航栏链接 ==========
@@ -40,15 +40,15 @@ export const navLinks = [
 
 // ========== 关于我 ==========
 export const about = {
-  subtitle: 'A passionate developer crafting digital experiences with clean code and thoughtful design.', // 区块副标题
-  backgroundTitle: 'Background',   // 个人介绍标题
+  subtitle: '一位充满激情的开发者，用简洁的代码和用心的设计创造数字体验。', // 区块副标题
+  backgroundTitle: '背景',   // 个人介绍标题
   background: [                    // 个人介绍段落（数组，每项为一段）
-    'I\'m a full-stack developer with a passion for building beautiful, performant web applications. With years of experience in modern web technologies, I focus on creating solutions that are both elegant and scalable.',
-    'When I\'m not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.',
+    '我是一名全栈开发者，热衷于构建美观、高性能的 Web 应用。拥有多年的现代 Web 技术经验，专注于打造既优雅又可扩展的解决方案。',
+    '在不敲代码的时候，我喜欢探索新技术、为开源项目做贡献，或者和开发者社区分享知识。',
   ],
-  skillsTitle: 'Skills',           // 技能标题
-  techStackTitle: 'Tech Stack',    // 技术栈标题
-  experienceTitle: 'Experience',   // 经历标题
+  skillsTitle: '技能',           // 技能标题
+  techStackTitle: '技术栈',    // 技术栈标题
+  experienceTitle: '经历',   // 经历标题
 }
 
 // ========== 技术栈 ==========
@@ -67,31 +67,31 @@ export const techStack = [
 // ========== 技能 ==========
 // level: 0-100，控制进度条宽度
 export const skills = [
-  { name: 'Frontend Development', level: 95 },  // 前端开发
-  { name: 'Backend Development', level: 88 },   // 后端开发
-  { name: 'UI/UX Design', level: 82 },          // UI/UX 设计
-  { name: 'DevOps', level: 75 },                // 运维部署
+  { name: '前端开发', level: 95 },
+  { name: '后端开发', level: 88 },
+  { name: 'UI/UX 设计', level: 82 },
+  { name: '运维部署', level: 75 },
 ]
 
 // ========== 经历时间轴 ==========
 export const timeline = [
   {
-    year: '2024 — Present',           // 时间段
-    title: 'Senior Developer',        // 职位
-    company: 'Tech Company',          // 公司
-    description: 'Leading frontend architecture and building scalable web applications.', // 工作描述
+    year: '2027 —  Future',
+    title: '一名开发人员',
+    company: 'Unseen',
+    description: '',
   },
   {
-    year: '2022 — 2024',
-    title: 'Full Stack Developer',
-    company: 'Startup Inc.',
-    description: 'Built and shipped multiple products from concept to production.',
+    year: '2012-2027',
+    title: '学生',
+    company: '',
+    description: '一直在上学',
   },
   {
-    year: '2020 — 2022',
-    title: 'Frontend Developer',
-    company: 'Digital Agency',
-    description: 'Created beautiful, responsive websites for diverse clients.',
+    year: '2006-2012',
+    title: '学前',
+    company: '',
+    description: '幼儿时期',
   },
 ]
 
@@ -103,66 +103,42 @@ export const timeline = [
 // live: 在线预览链接
 export const projects = [
   {
-    title: 'Project One',
-    description: 'A modern web application built with Next.js and TypeScript. Features real-time collaboration and a beautiful UI.',
-    image: '/projects/project1.jpg',
-    tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'Prisma'],
-    github: 'https://github.com/yourusername/project1',
-    live: 'https://project1.example.com',
+    title: 'Portfolio',
+    description: '基于 Next.js 14、TypeScript 和 TailwindCSS 打造的现代响应式个人作品集网站，所有内容通过一个配置文件集中管理，无需改动任何组件代码即可轻松自定义。',
+    image: '/projects/1.png',
+    tags: ['Next.js', 'TypeScript', 'TailwindCSS'],
+    github: 'https://github.com/Iconkop/home.git',
+    live: 'https://lcunt.cn',
   },
   {
-    title: 'Project Two',
-    description: 'An AI-powered tool that helps developers write better code. Integrates with popular IDEs and CI/CD pipelines.',
-    image: '/projects/project2.jpg',
+    title: '项目二',
+    description: '一款 AI 驱动的开发者工具，帮助程序员写出更好的代码，深度集成主流 IDE 与 CI/CD 流程。',
+    image: '/projects/Portfolio.png',
     tags: ['React', 'Python', 'OpenAI', 'PostgreSQL'],
     github: 'https://github.com/yourusername/project2',
     live: 'https://project2.example.com',
   },
-  {
-    title: 'Project Three',
-    description: 'A design system and component library used by multiple teams. Focuses on accessibility and developer experience.',
-    image: '/projects/project3.jpg',
-    tags: ['React', 'Storybook', 'Radix UI', 'Figma'],
-    github: 'https://github.com/yourusername/project3',
-    live: 'https://project3.example.com',
-  },
-  {
-    title: 'Project Four',
-    description: 'A real-time dashboard for monitoring cloud infrastructure. Built with WebSocket and server-sent events.',
-    image: '/projects/project4.jpg',
-    tags: ['Vue.js', 'D3.js', 'Go', 'Redis'],
-    github: 'https://github.com/yourusername/project4',
-    live: 'https://project4.example.com',
-  },
-]
+  ]
 
 // ========== 项目区块 ==========
 export const projectsSection = {
-  subtitle: 'A selection of projects I\'ve built — from web apps to developer tools.', // 区块副标题
+  subtitle: '以下是我开发的一些精选项目——从 Web 应用到开发者工具。',
 }
 
 // ========== 我的网站 ==========
-// 可自由增减，布局自动适配：
-//   PC 端：1-2 个居中，3 个靠左，4 个填满一行
-//   移动端：每行 2 个，奇数时最后一个居中
-// icon: 图标图片路径（放在 public/ 目录下），留空显示默认图标
-// url: 网站链接
-// description: 简短描述（可选，显示在名称下方）
 export const mySiteSection = {
   subtitle: 'A collection of my websites and projects.', // 区块副标题
 }
 
 export const mySite = [
-  { name: '小辰云小栈', icon: 'https://xusue.com/favicon.ico', url: 'https://xusue.com', description: 'Personal blog' },
-  { name: 'GitHub', icon: '', url: 'https://github.com', description: 'Open source projects' },
-  { name: 'Docs', icon: '', url: 'https://example.com/docs', description: 'Documentation' },
-  { name: 'Gallery', icon: '', url: 'https://example.com/gallery', description: 'Photo gallery' },
-  ]
+  { name: '小辰云小栈', icon: 'https://xusue.com/favicon.ico', url: 'https://xusue.com', description: '个人博客' },
+  { name: 'GitHub', icon: '', url: 'https://github.com', description: '开源项目' },
+]
 
 // ========== 联系方式 ==========
 export const contact = {
-  subtitle: 'Interested in working together or just want to say hello? Feel free to reach out through any of these channels.', // 区块副标题
-  cta: 'Say Hello',  // 主按钮文字
+  subtitle: '想一起合作，或者只是想打个招呼？欢迎通过以下任意方式联系我。',
+  cta: '打个招呼',
 }
 
 // ========== 页脚 ==========
