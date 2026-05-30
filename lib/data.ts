@@ -142,7 +142,8 @@ export const contact = {
 }
 
 // ========== 页脚 ==========
-export const footer = {
-  copyright: 'All rights reserved.',  // 版权声明后缀（前面会自动拼接年份和名字）
-  icp: '',                             // 备案号（如需显示可填写，留空则不显示）
-}
+// 页脚附加链接（显示在版权行，用 · 分隔，name/url/img 均可选）
+export const footerLinks: { name?: string; url?: string; img?: string }[] = [
+  { name: '豫ICP备2024101998号-1', url: 'https://beian.miit.gov.cn/' },
+  { name: '豫ICP备2024101998号-2', url: 'https://beian.miit.gov.cn/' },
+]

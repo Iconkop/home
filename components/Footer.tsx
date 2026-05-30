@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { personalInfo, footer } from '@/lib/data'
+import { personalInfo, footerLinks } from '@/lib/data'
 
 export default function Footer() {
   const [showTop, setShowTop] = useState(false)
@@ -27,10 +27,32 @@ export default function Footer() {
         className="py-6 sm:py-8 px-4 sm:px-6 border-t border-black/5 dark:border-white/5"
       >
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
-          <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 text-xs text-muted-foreground">
-            <span>&copy; {new Date().getFullYear()} {personalInfo.name}. {footer.copyright}</span>
-            {footer.icp && <span className="hidden sm:inline">·</span>}
-            {footer.icp && <span>{footer.icp}</span>}
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-muted-foreground">
+            <span>&copy; {new Date().getFullYear()} {personalInfo.name}. All rights reserved.</span>
+            {footerLinks.map((link, i) => (
+              <span key={i} className="flex items-center gap-x-2">
+                <span className="hidden sm:inline">·</span>
+                {link.img && (
+                  <img
+                    src={link.img}
+                    alt=""
+                    className="inline-block h-3 w-auto align-middle rounded-sm object-contain"
+                  />
+                )}
+                {link.url ? (
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-foreground transition-colors underline-offset-2 hover:underline"
+                  >
+                    {link.name || link.url}
+                  </a>
+                ) : (
+                  <span>{link.name}</span>
+                )}
+              </span>
+            ))}
           </div>
           <div className="flex items-center gap-4">
             <motion.a
